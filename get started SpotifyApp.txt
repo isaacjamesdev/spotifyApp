@@ -1,0 +1,9 @@
+---get started SpotifyApp---
+
+-configurações iniciais (padrão);
+    -eslint e tals
+    -saga
+    -store
+    -routes
+-styled component
+-status bar config
