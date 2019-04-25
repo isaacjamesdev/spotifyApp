@@ -1,0 +1,18 @@
+get Start projeto:
+
+{   
+    redux,
+    redux-saga/effects,
+    react-redux
+}
+
+0º eslint, path raiz, pretty (eslint -D, babel-eslint -D, babel-plugin-root-import -D, 
+                                eslint-import-resolver-babel-plugin-root-import, jscongig.json, eslintrc.json,  .babelrc)
+0ª Routes
+1º configurar o saga 
+2º configura o duck
+3º configurar o store
+4º prover store para o App
+5º reactotron (saga, redux)
+- para navegação
+-react-navigation react-native-gesture-handler

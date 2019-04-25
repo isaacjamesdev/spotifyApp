@@ -1,0 +1,49 @@
+get Start projeto:
+
+{   
+    redux,
+    redux-saga/effects,
+    react-redux
+}
+
+0º eslint, path raiz, pretty (eslint -D, babel-eslint -D, babel-plugin-root-import -D, 
+                                eslint-import-resolver-babel-plugin-root-import, jscongig.json, eslintrc.json,  .babelrc)
+0ª Routes
+1º configurar o saga 
+2º configura o duck
+3º configurar o store
+4º prover store para o App
+5º reactotron (saga, redux)
+- para navegação
+-react-navigation react-native-gesture-handler
+
+---
+{desenvolvimento}
+-json-server [FAKE API]
+
+{para duck} [L-I-N-D-O-!]
+    -reduxsauce - [ISSO É LINDO - automatiza a criação de Types e Actions]:
+        /*
+        * Action and Types
+        */
+        export const { Types, Creators } = createActions({
+        loadRequest: null,
+        loadSuccess: ['data'],
+        loadFailure: null,
+        });
+
+        export const PodcastsTypes = Types;
+        export default Creators;
+
+    -seamless-immutable
+        export const INITIAL_STATE = Immutable({
+            data: [],
+        });
+
+        /*
+        * Reducers
+        */
+
+        export const reducer = CreateReducer(INITIAL_STATE, {
+             [Types.LOAD_SUCCESS]: (state, { data }) => state.merge({ data }),
+        });

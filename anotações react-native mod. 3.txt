@@ -1,0 +1,34 @@
+Sobre o dispatch
+    -usar o bindAction creator nas mapDispatchToProps.
+    logo, dentro do componente, não é necessário passar esse parametro 'dispatch'
+
+Saga 
+    -MÓDULOS A IMPORTAR: 
+        >{all, takeLatest, call, put, select(state => )}  (Aposto que você lembra para que serve cada uma. ) - lembre-se de usar o yield
+
+    -ATENÇÃO: O SAGA não interrompe a chamada até o reducer. ele só pega carona.
+        ou seja, a action, sempre vai chegar no reducer. 
+    -principal arquivo é rootSaga
+    -para usar o saga, no index exporta uma função no padrão generator. 
+    -meu componente agora chama actions do saga. 
+    
+    FLUXO: component.action > SAGA > (reducer || SAGA)
+        >criar o rootSaga 
+        >configurar o store:
+            >createSagaMiddleware, 
+                >cria um variavel com essa função
+                >coloca essa variavel
+                        como segundo parametro do createStore, usando o applYmiddleware
+            >import o rootSaga, 
+                >executa a função sagaMiddleware.run(rootSaga)
+        >cria a action REQUEST, (o componente agora, só chama request, sempre)
+            >coloca o saga pra ouvir essa action, passa a função
+            >nessa função chama o success, para aí sim alterar o state do redux
+
+    -NAVEGAÇÃO com o SAGA  (ver aula 13)
+        >Cria service Navigator
+
+==Usar em projetos:
+    -PropTypes
+    -reactotron + console.tron.createStore + reactotron-redux-saga
+    -styled component
