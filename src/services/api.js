@@ -1,6 +1,6 @@
-import Axios from 'axios';
+import axios from 'axios';
 
-const api = Axios({
+const api = axios.create({
   baseURL: 'http://10.0.3.2:3000',
 });
 

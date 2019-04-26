@@ -4,7 +4,7 @@ import Immutable from 'seamless-immutable';
 /*
  * Action and Types
  */
-export const { Types, Creators } = createActions({
+const { Types, Creators } = createActions({
   loadRequest: null,
   loadSuccess: ['data'],
   loadFailure: null,
@@ -26,5 +26,5 @@ export const INITIAL_STATE = Immutable({
  */
 
 export const reducer = createReducer(INITIAL_STATE, {
-  [Types.LOAD_SUCCESS]: (state, { data }) => state.merge({ data }),
+  [Types.LOAD_SUCCESS]: (state, { data }) => state.merge(data),
 });

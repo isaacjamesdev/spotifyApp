@@ -14,7 +14,7 @@ class Main extends Component {
 
   render() {
     const { podcasts } = this.props;
-    console.tron.log(this.props);
+    console.tron.log(podcasts);
     return (
       <Container>
         <PageTitle> Podcast do Sucesso</PageTitle>
